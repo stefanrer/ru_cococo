@@ -1,0 +1,4 @@
+Flask==3.0.3
+SQLAlchemy==2.0.34
+mysql-connector-python
+numpy==2.1.1

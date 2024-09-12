@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300&amp;subset=cyrillic" rel="stylesheet">
+    <title>CoCoCo: Collocations, Colligations, and Corpora</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="module" src="../static/javascript/about.js"></script>
+    <script type="module" src="../static/javascript/translateButton.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="cococo">
+            <img src="../static/icons/cococo_old.png" alt="CoCoCo" class="logo">
+            <div>Collocations<br>Colligations<br>Constructions</div>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a class="nav-link" href="/main">ПОИСК</a></li>
+                <li><a class="nav-lang" id="language-switch" data-lang="{{ lang }}" href="#">ENG</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="overlay"></div>
+    <div class="container about">
+        <div id="original">
+            <h2>О ПРОЕКТЕ</h2>
+            <p>Мы часто видим студентов, которые обладают обширными знаниями о языке на теоретическом уровне, но не могут использовать его идиоматически, как это делают носители языка. Преподаватели иностранных языков регулярно спрашивают, как слова сочетаются друг с другом. Наша цель - создать технологическое решение, которое ответит на эти вопросы и произведет революцию в изучении иностранного языка (в данном случае русского). Основной акцент делается на предоставлении веб-инструментов, которые стимулируют активное, интерактивное обучение, в отличие от более традиционных способов абсорбтивного обучения, которые приводят к накоплению пассивных знаний. В этом контексте мы называем наш целевой режим обучения «интерактивным обучением». В частности, проект CoCoCo охватывает несколько направлений:</p>
+            <p>
+            •	использование крупномасштабных аннотированных корпусов украинского языка GRAK;<br>
+            •	анализ сопоставления слов с использованием статистических методов и корпусного подхода;<br>
+            •	создание удобной системы, которая генерирует ответы по запросу.<br>
+            </p>
+            <p>Этот ресурс разработан исследовательской группой, базирующейся в Хельсинкском университете. Проект CoCoCo частично финансируется исследовательским фондом BAULT и финским национальным агентством по образованию EDUFI.</p>
+
+            <h2>РУКОВОДИТЕЛЬ ГРУППЫ</h2>
+            <p>Михаил Копотев, кандидат филологических наук, доцент кафедры современных языков Хельсинкского университета.</p>
+            <h2>УЧАСТНИКИ</h2>
+            <p>
+            •	Карина Адамюк, администратор проекта<br>
+            •	Дмитрий Пономарь, IT-специалист проекта<br>
+            •	Светлана Миронюк, администратор проекта<br>
+            •   Ирина Гарбера, наставник студентов Донецкого национального университета имени Василя Стуса<br>
+            </p>
+            <p>Студенты Донецкого национального университета имени Василя Стуса:</p>
+            <p>
+            •	Мария Гуменюк<br>
+            •	Елизавета Даценко<br>
+            •	Иван Костенко<br>
+            •	Карина Лященко<br>
+            •	Анна Малюта<br>
+            •   Анна Мордюк<br>
+            •   Анастасия Овчарук<br>
+            •   Марина Полищук<br>
+            •	Анастасия Пудова<br>
+            •   Олена Рупа<br>
+            •   Юлия Слиденко<br>
+            •   Мирослава Девятко<br>
+            •   Анастасия Заричнюк<br>
+            •   Диана Куценко<br>
+            •   Наталья Лутишина<br>
+            •   Ксения Палагно<br>
+            •	Анна Перепелюк<br>
+            </p>
+            <h2>ВЫРАЖЕНИЕ БЛАГОДАРНОСТИ</h2>
+
+            <p>Выражаем глубокую благодарность разработчикам украинского языкового корпуса GRAK (особенно Марии Шведовой) за предоставление нам данных. Все права на исходные данные принадлежат их владельцам.</p>
+
+            <h2>КОНТАКТЫ</h2>
+            <p>Пишите нам по адресу mihail dot kopotev at helsinki dot fi.
+                Мы всегда рады получить ваши комментарии и предложения.</p>
+        </div>
+        <div id="translated" style="display: none">
+            <h2>ABOUT THE PROJECT</h2>
+            <p>We often see students who have a great deal of knowledge about the language on the theoretical level, but are unable to use it idiomatically, in a way native speakers can do. Instructors teaching a foreign language are regularly asked how words co-occur. Our goal is to create a technological solution that answers these questions and revolutionizes learning of a foreign language (Russian in the case). The primary focus is on providing web-based tools that stimulate active, participatory learning as opposed to more traditional ways of absorptive learning, which results in accumulation of passive knowledge. We refer to our target mode of learning as “inter-active learning” in this context. In particular, the CoCoCo project encompasses several directions:</p>
+            <p>
+            •	utilizing large-scale annotated corpora of the Ukrainian language GRAK;<br>
+            •	analysis word co-occurrences using statistic methods and corpus-driven approach;<br>
+            •	building user-friendly system that generates answers on demand.<br>
+            </p>
+            <p>This resource is developed by the research group based at the University of Helsinki. The CoCoCo project is partially financed by BAULT research the Finnish National Agency for Education EDUFI.</p>
+
+            <h2>GROUP LEADER</h2>
+            <p>Mikhail Kopotev, PhD, Associate Professor of Modern Languages, University of Helsinki.</p>
+            <h2>PARTICIPANTS</h2>
+            <p>
+            •	Karina Adamusik, Project Administrator<br>
+            •	Dmytro Ponomar, IT Specialist of the Project<br>
+            •	Svitlana Myronyuk, Project Administrator<br>
+            •	Iryna Garbera, Mentor of students from Vasyl Stus Donetsk National University<br>
+            </p>
+            <p>Students from Vasyl Stus Donetsk National University:</p>
+            <p>
+            •	Maria Gumenyuk<br>
+            •	Elizaveta Datsenko<br>
+            •	Ivan Kostenko<br>
+            •	Karina Lyashchenko<br>
+            •	Anna Malyuta<br>
+            •	Anna Mordyuk<br>
+            •	Anastasia Ovcharuk<br>
+            •	Marina Polischuk<br>
+            •	Anastasia Pudova<br>
+            •	Olena Rupa<br>
+            •	Yulia Slidenko<br>
+            •	Miroslava Devyatko<br>
+            •	Anastasia Zarichnyuk<br>
+            •	Diana Kutsenko<br>
+            •	Natalia Lutishina<br>
+            •	Ksenia Palagno<br>
+            •	Anna Perepelyuk<br>
+            </p>
+            <h2>ACKNOWLEDGEMENTS</h2>
+
+            <p>We express our deep gratitude to the developers of the GRAK Ukrainian language corpus (especially to Maria Shvedova) for providing us with data. All rights to the original data belong to their owners.</p>
+
+            <h2>CONTACTS</h2>
+            <p>Feel free to write us at mihail dot kopotev at helsinki dot fi.
+                We are always glad to receive comments and suggestions.</p>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="affiliation">
+            <a href="https://www.helsinki.fi/en" target="_blank">UNIVERSITY OF HELSINKI, 2015—2024</a>
+        </div>
+    </div>
+</body>
+</html>

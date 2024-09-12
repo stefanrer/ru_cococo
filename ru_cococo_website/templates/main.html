@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300&amp;subset=cyrillic" rel="stylesheet">
+    <title>CoCoCo: Collocations, Colligations, and Corpora</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="module" src="../static/javascript/translateButton.js"></script>
+    <script type="module" src="../static/javascript/main.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="cococo">
+            <img src="../static/icons/cococo_old.png" alt="CoCoCo" class="logo">
+            <div>Коллокации<br>Коллигации<br>Конструкции</div>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a class="nav-link" href="/about">О НАС</a></li>
+                <li><a class="nav-lang" id="language-switch" data-lang="{{ lang }}" href="#">ENG</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="collocation">
+            <div class="search-banner">
+                <div class="search-filters">
+                    <div class="search-filter" id="search-filter1">
+                        <div class="toggle-box">
+                            <a class="toggle-wordform">ТОКЕН</a>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round" id="lemma-toggle1"></span>
+                            </label>
+                            <a class="toggle-lemma">ЛЕММА</a>
+                        </div>
+                        <div>
+                            <input id="word1" class="input_word" placeholder="Введите слово">
+                        </div>
+                        <div class="pos-filter">
+                            <div class="word-part">ЧАСТЬ РЕЧИ:</div>
+                            <select id="part-select1" name="part1" class="part-select">
+                                <option value="all" selected>Все</option>
+                                <option value="noun">Существительное</option>
+                                <option value="verb">Глагол</option>
+                                <option value="adj">Прилагательное</option>
+                                <option value="adv">Наречие</option>
+                                <option value="part">Частица</option>
+                                <option value="pron">Местоимение</option>
+                                <option value="adp">Предлог</option>
+                                <option value="num">Числительное</option>
+                                <option value="propn">Имя собственное</option>
+                                <option value="cconj">Союз</option>
+                                <option value="sconj">Подчинительный союз</option>
+                                <option value="aux">Вспомогательный глагол</option>
+                                <option value="intj">Междометие</option>
+                            </select>
+                            <a id="show-feats1" class="part-filters">
+                                <div class="morphology-settings-button">...</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="search-filter" id="search-filter2">
+                        <div class="toggle-box">
+                            <a class="toggle-wordform">ТОКЕН</a>
+
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round" id="lemma-toggle2"></span>
+                            </label>
+
+                            <a class="toggle-lemma">ЛЕММА</a>
+                        </div>
+                        <div>
+                            <input id="word2" class="input_word" placeholder="Введите слово">
+                        </div>
+                        <div class="pos-filter">
+                            <div class="word-part">ЧАСТЬ РЕЧИ:</div>
+                            <select id="part-select2" name="part2" class="part-select">
+                                <option value="all" selected>Все</option>
+                                <option value="noun">Существительное</option>
+                                <option value="verb">Глагол</option>
+                                <option value="adj">Прилагательное</option>
+                                <option value="adv">Наречие</option>
+                                <option value="part">Частица</option>
+                                <option value="pron">Местоимение</option>
+                                <option value="adp">Предлог</option>
+                                <option value="num">Числительное</option>
+                                <option value="propn">Имя собственное</option>
+                                <option value="cconj">Союз</option>
+                                <option value="sconj">Подчинительный союз</option>
+                                <option value="aux">Вспомогательный глагол</option>
+                                <option value="intj">Междометие</option>
+                            </select>
+                            <a id="show-feats2"class="part-filters">
+                                <div class="morphology-settings-button">...</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="search-filter" id="search-filter3">
+                        <div class="toggle-box">
+                            <a class="toggle-wordform">ТОКЕН</a>
+
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round" id="lemma-toggle3"></span>
+                            </label>
+
+                            <a class="toggle-lemma">ЛЕММА</a>
+                        </div>
+                        <div>
+                            <input id="word3" class="input_word" placeholder="Введите слово">
+                        </div>
+                        <div class="pos-filter">
+                            <div class="word-part">ЧАСТЬ РЕЧИ:</div>
+                            <select id="part-select3" name="part3" class="part-select">
+                                <option value="all" selected>Все</option>
+                                <option value="noun">Существительное</option>
+                                <option value="verb">Глагол</option>
+                                <option value="adj">Прилагательное</option>
+                                <option value="adv">Наречие</option>
+                                <option value="part">Частица</option>
+                                <option value="pron">Местоимение</option>
+                                <option value="adp">Предлог</option>
+                                <option value="num">Числительное</option>
+                                <option value="propn">Имя собственное</option>
+                                <option value="cconj">Союз</option>
+                                <option value="sconj">Подчинительный союз</option>
+                                <option value="aux">Вспомогательный глагол</option>
+                                <option value="intj">Междометие</option>
+                            </select>
+                            <a id="show-feats3" class="part-filters">
+                                <div class="morphology-settings-button">...</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="search-filter" id="search-filter4">
+                    <div class="toggle-box">
+                        <a class="toggle-wordform">ТОКЕН</a>
+
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round" id="lemma-toggle4"></span>
+                        </label>
+
+                        <a class="toggle-lemma">ЛЕММА</a>
+                    </div>
+                    <div>
+                        <input id="word4" class="input_word" placeholder="Введите слово">
+                    </div>
+                    <div class="pos-filter">
+                        <div class="word-part">ЧАСТЬ РЕЧИ:</div>
+                        <select id="part-select4" name="part4" class="part-select">
+                            <option value="all" selected>Все</option>
+                                <option value="noun">Существительное</option>
+                                <option value="verb">Глагол</option>
+                                <option value="adj">Прилагательное</option>
+                                <option value="adv">Наречие</option>
+                                <option value="part">Частица</option>
+                                <option value="pron">Местоимение</option>
+                                <option value="adp">Предлог</option>
+                                <option value="num">Числительное</option>
+                                <option value="propn">Имя собственное</option>
+                                <option value="cconj">Союз</option>
+                                <option value="sconj">Подчинительный союз</option>
+                                <option value="aux">Вспомогательный глагол</option>
+                                <option value="intj">Междометие</option>
+                        </select>
+                        <a id="show-feats4" class="part-filters">
+                            <div class="morphology-settings-button">...</div>
+                        </a>
+                    </div>
+                </div>
+                </div>
+                <div class="search-buttons">
+                    <div class="plus-minus-button-group">
+                        <div class="co-button minus-button" id="minus-button" style="" title="Убрать элемент">
+                            <div class="minus">-</div>
+                        </div>
+                        <div class="co-button plus-button" id="plus-button" title="Добавить элемент">
+                            <div class="plus">+</div>
+                        </div>
+                    </div>
+                    <div class="co-button" id="search-button">Поиск</div>
+                    <div class="co-button" id="reset-button">Отмена</div>
+                    <div class="co-checkbox" id="advanced-checkbox"><input type="checkbox" id="advancedSearch"><label for="advancedSearch" style="cursor: pointer;">Расширенный</label></div>
+
+                </div>
+            </div>
+            <div class="user-query" id="user-query"></div>
+        </div>
+    </div>
+    <div id="results"></div>
+    <div class="footer">
+        <div class="affiliation">
+            <a href="https://www.helsinki.fi/en" target="_blank">Хельсинкский университет, 2015—2024</a>
+        </div>
+    </div>
+</body>
+</html>
