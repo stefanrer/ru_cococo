@@ -1,5 +1,6 @@
 # Instruction:
-1) Place sql dump file into db directory
+1) Create `db directory` in root folder
+2) Place sql dump file into **db directory**
 `it should be named the same as MYSQL_DATABASE variable in docker-compose.yml (ru_cococo.sql)`
 2) In root directory
 `docker-compose up --build`
