@@ -9,13 +9,20 @@ Currently mysql db is on port **3307** if you want to change:
 
 1) Change the MYSQL_TCP_PORT: 3307 line `in docker-compose.yml` to the port you like
 2) Change ports:- 3307:3307 line `in docker-compose.yml` to same port you selected in previous step
-3) Change sql connection string in flask app `ru_cococo_website/App/database.py` line 23:
-```python
-connection_string = "mysql+mysqlconnector://root:12345678@db:3307/ru_cococo" # This
-engine = create_engine(connection_string, echo=False)
-base = declarative_base()
-```
-change the part after `mysql+mysqlconnector://`:
+3) Change CMD line in `ru_cococo_website/Dockerfile`:
+   ```bash
+   # Run wait-for-it script and then start flask
+   CMD ["./wait-for-it.sh", "db:3307", "-s", "--timeout=0", "--", "flask", "run", "--host=0.0.0.0"]
+   ```
+   replace port in `db:3307` to the selected port 
 
-**user:password@db:port/db_name**
+4) Change sql connection string in flask app `ru_cococo_website/App/database.py` line 23:
+   ```python
+   connection_string = "mysql+mysqlconnector://root:12345678@db:3307/ru_cococo" # This
+   engine = create_engine(connection_string, echo=False)
+   base = declarative_base()
+   ```
+   change the part after `mysql+mysqlconnector://`:
+   
+   **user:password@db:port/db_name**
    
