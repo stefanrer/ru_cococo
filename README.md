@@ -14,7 +14,7 @@ Currently mysql db is on port **3307** if you want to change:
    # Run wait-for-it script and then start flask
    CMD ["./wait-for-it.sh", "db:3307", "-s", "--timeout=0", "--", "flask", "run", "--host=0.0.0.0"]
    ```
-   replace port in `db:3307` to the selected port 
+   replace the port in `db:3307` to the selected port 
 
 4) Change sql connection string in flask app `ru_cococo_website/App/database.py` line 23:
    ```python
